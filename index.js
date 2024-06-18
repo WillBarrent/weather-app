@@ -8,7 +8,7 @@ const cards = document.querySelectorAll('.weather__card')
 const loadingBar = document.querySelector('.weather__loading');
 
 async function getWeather(location) {
-    let response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=7`, {mode: "cors"});
+    let response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=7`, {mode: "cors"});
     let data = await response.json();
 
     return ({
