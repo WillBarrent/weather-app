@@ -11,7 +11,6 @@ async function getWeather(location) {
     let response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${location}&days=7`, {mode: "cors"});
     let data = await response.json();
 
-    console.log(data);
     return ({
         locationName: data.location.name,
         currentIcon: data.current.condition.icon,
